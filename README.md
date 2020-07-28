@@ -1,16 +1,25 @@
-# pinjemin
+# SESUAP
+Aplikasi SeSuap merupakan perwujudan dari zero food waste movement. SeSuap hadir untuk ikut serta dalam membantu mengatasi permasalahan dalam isu lingkungan, climate change, dan kelaparan yang ada di Indonesia. SeSuap merupakan aplikasi non-profit yang bergerak di bidang sosial dan kesehatan.
 
-A new Flutter project.
+## Frontend Application (with flutter)
+### Installation
+1. Install Flutter -  Get the Flutter SDK (See.. https://flutter.dev/docs/get-started/install) 
+2. Install Android Studio
+3. Set up android device or android emulator
+4. Clone https://github.com/dimassatriap/Sesuap.git into your directory
+5. Go to project folder: ".\Sesuap"
+6. Run "flutter packages get" on your terminal
+```bash
+$ flutter packages get
+```
+7. Run "flutter run" on your terminal or simply Run & Debug it on your IDE (Option: Visual Studio Code, Android Studio)
+```bash
+$ flutter run
+```
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Development Progress
+- [x] Implementation of Provider & Listener State Management
+- [x] Splash Screen
+- [x] Login & Register UI
+- [x] Fetch and Post Product
+- [x] Account UI

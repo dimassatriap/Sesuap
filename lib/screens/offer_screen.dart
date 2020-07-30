@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pinjemin/components/bottomnav.dart';
 import 'package:pinjemin/screens/form_offer.dart';
 import '../providers/products.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +31,9 @@ class _OfferScreenState extends State<OfferScreen> {
       setState(() {
         _isLoading = true;
       });
-      Provider.of<Products>(context, listen: false).fetchOfferProduct().then((_) {
+      Provider.of<Products>(context, listen: false)
+          .fetchOfferProduct()
+          .then((_) {
         setState(() {
           _isLoading = false;
         });
@@ -43,7 +46,7 @@ class _OfferScreenState extends State<OfferScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+        /*appBar: AppBar(
           title: TextField(
             controller: null,
             autofocus: false,
@@ -72,21 +75,22 @@ class _OfferScreenState extends State<OfferScreen> {
                   print("settings");
                 }),
           ],
-        ),
-        floatingActionButton: new FloatingActionButton(
+        ),*/
+        /*floatingActionButton: new FloatingActionButton(
             heroTag: null,
             foregroundColor: Colors.white,
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => FormOffer()));
             },
-            child: Icon(Icons.add)),
+            child: Icon(Icons.add)),*/
         body: _isLoading
             ? Center(
                 child: CircularProgressIndicator(),
               )
             : RefreshIndicator(
                 onRefresh: () => _refreshOfferProduct(),
-                child: ProductsGrid(type: true)));
+                child: ProductsGrid(type: true)),
+        bottomNavigationBar: BottomNavBar());
   }
 }

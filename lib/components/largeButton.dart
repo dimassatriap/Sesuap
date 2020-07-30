@@ -16,28 +16,26 @@ class LargeButton extends StatefulWidget {
 class _LargeButtonState extends State<LargeButton> {
   GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
 
-   _login() async{
-    try{
+  _login() async {
+    try {
       await _googleSignIn.signIn();
       _saveUser();
       setState(() {
         Navigator.of(context).pushReplacementNamed(MainScreen.tag);
       });
-    } catch (err){
+    } catch (err) {
       print(err);
     }
   }
 
   Future<void> _saveUser() async {
     var inputUser = User(
-      email: _googleSignIn.currentUser.email, 
-      firstname: _googleSignIn.currentUser.displayName
-    );
-    try{
-       await Provider.of<Users>(context, listen: false)
-            .addUser(inputUser);
+        email: _googleSignIn.currentUser.email,
+        firstname: _googleSignIn.currentUser.displayName);
+    try {
+      await Provider.of<Users>(context, listen: false).addUser(inputUser);
     } catch (error) {
-       print(error);
+      print(error);
       throw (error);
     }
   }

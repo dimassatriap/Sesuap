@@ -19,73 +19,17 @@ class BottomNavBar extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         items: [
           new BottomNavigationBarItem(
-            //icon: Icon(Custom.iconrequest),
-            icon: ShaderMask(
-              shaderCallback: (Rect bounds) {
-                return LinearGradient(
-                  //center: Alignment.topLeft,
-                  //radius: 1,
-                  colors: <Color>[
-                    Color.fromARGB(255, 59, 178, 184),
-                    Color.fromARGB(255, 66, 224, 152),
-                  ],
-                  tileMode: TileMode.repeated,
-                ).createShader(bounds);
-              },
-              child: Icon(CustSesuap.butuh),
-            ),
-            //icon: new Icon(Icons.dashboard, color: Colors.grey),
-            //title: new Text(''),
+            icon: Icon(Icons.fastfood),
             title: Text('Kebutuhan'),
           ),
           new BottomNavigationBarItem(
-            icon: ShaderMask(
-              shaderCallback: (Rect bounds) {
-                return LinearGradient(
-                  //center: Alignment.topLeft,
-                  //radius: 1,
-                  colors: <Color>[
-                    Color.fromARGB(255, 59, 178, 184),
-                    Color.fromARGB(255, 66, 224, 152),
-                  ],
-                  tileMode: TileMode.repeated,
-                ).createShader(bounds);
-              },
-              child: Icon(CustSesuap.bantu),
-            ),
+            icon: Icon(Custom.iconoffer),
             title: Text('Bantu'),
           ),
           new BottomNavigationBarItem(
-              icon: ShaderMask(
-                shaderCallback: (Rect bounds) {
-                  return LinearGradient(
-                    //center: Alignment.topLeft,
-                    //radius: 1,
-                    colors: <Color>[
-                      Color.fromARGB(255, 59, 178, 184),
-                      Color.fromARGB(255, 66, 224, 152),
-                    ],
-                    tileMode: TileMode.repeated,
-                  ).createShader(bounds);
-                },
-                child: Icon(CustSesuap.partner),
-              ),
-              title: Text('Partner')),
+              icon: Icon(Icons.people), title: Text('Partner')),
           new BottomNavigationBarItem(
-            icon: ShaderMask(
-              shaderCallback: (Rect bounds) {
-                return LinearGradient(
-                  //center: Alignment.topLeft,
-                  //radius: 1,
-                  colors: <Color>[
-                    Color.fromARGB(255, 59, 178, 184),
-                    Color.fromARGB(255, 66, 224, 152),
-                  ],
-                  tileMode: TileMode.repeated,
-                ).createShader(bounds);
-              },
-              child: Icon(CustSesuap.profil),
-            ),
+            icon: Icon(Icons.person),
             title: Text('Profil'),
           )
         ],

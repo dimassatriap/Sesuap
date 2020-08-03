@@ -68,7 +68,7 @@ class _AkunScreenState extends State<AkunScreen> {
             Container(
               // setting profil
               constraints: BoxConstraints(minHeight: 200, maxHeight: 280),
-              color: Color.fromARGB(255, 255, 119, 0),
+              color: Colors.black,
               child: Column(
                 children: <Widget>[
                   Padding(
@@ -168,7 +168,7 @@ class _AkunScreenState extends State<AkunScreen> {
                                           // Custom1.iconpoint,
                                           Icons.monetization_on,
                                           size: 30,
-                                          color: Colors.red,
+                                          color: Colors.white,
                                         ),
                                         onPressed: () {
                                           print(userExist[0].firstname);

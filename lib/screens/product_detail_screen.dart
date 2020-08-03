@@ -78,7 +78,7 @@ class ProductDetailScreen extends StatelessWidget {
                               .format(loadedProduct.endDate);
                           return Text('$startDate - $endDate',
                               style: TextStyle(
-                                  color: Color.fromARGB(255, 255, 119, 0),
+                                  color: Colors.black,
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700));
                         }

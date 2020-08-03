@@ -49,7 +49,7 @@ class _MainScreenState extends State<MainScreen> {
                   // sets the background color of the `BottomNavigationBar`
                   canvasColor: Colors.white,
                   // sets the active color of the `BottomNavigationBar` if `Brightness` is light
-                  primaryColor: Color.fromARGB(255, 255, 119, 0),
+                  //primaryColor: Colors.red,
                   textTheme: Theme.of(context).textTheme.copyWith(
                       caption: new TextStyle(
                           color: Colors

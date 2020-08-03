@@ -25,7 +25,9 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    FlutterStatusbarcolor.setStatusBarColor(Color(0xFFFF7700));
+    FlutterStatusbarcolor.setStatusBarColor(
+      Color.fromARGB(255, 66, 224, 152),
+    );
     return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: Products()),

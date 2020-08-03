@@ -152,7 +152,7 @@ class _SettingAkunState extends State<SettingAkun> {
                                                       child: RaisedButton(
                                                         textColor: Colors.white,
                                                         color: Color.fromARGB(
-                                                            255, 255, 119, 0),
+                                                            255, 66, 224, 152),
                                                         padding:
                                                             const EdgeInsets
                                                                 .all(8.0),
@@ -282,7 +282,7 @@ class _SettingAkunState extends State<SettingAkun> {
                                                       child: RaisedButton(
                                                         textColor: Colors.white,
                                                         color: Color.fromARGB(
-                                                            255, 255, 119, 0),
+                                                            255, 66, 224, 152),
                                                         padding:
                                                             const EdgeInsets
                                                                 .all(8.0),
@@ -412,7 +412,7 @@ class _SettingAkunState extends State<SettingAkun> {
                                                       child: RaisedButton(
                                                         textColor: Colors.white,
                                                         color: Color.fromARGB(
-                                                            255, 255, 119, 0),
+                                                            255, 66, 224, 152),
                                                         padding:
                                                             const EdgeInsets
                                                                 .all(8.0),
@@ -624,7 +624,7 @@ class _SettingAkunState extends State<SettingAkun> {
                                                   child: RaisedButton(
                                                     textColor: Colors.white,
                                                     color: Color.fromARGB(
-                                                        255, 255, 119, 0),
+                                                        255, 66, 224, 152),
                                                     padding:
                                                         const EdgeInsets.all(
                                                             8.0),

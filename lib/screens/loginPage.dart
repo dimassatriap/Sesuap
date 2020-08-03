@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import '../components/largeButton.dart';
 import '../components/carousel.dart';
 
-
 class LoginScreen extends StatefulWidget {
   // static String google = '/assets/icons/icon-google.svg';
   static String tag = 'login-screen';
@@ -11,7 +10,6 @@ class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
-
 
 class _LoginScreenState extends State<LoginScreen> {
   // static MediaQueryData _mediaQueryData;
@@ -42,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: Colors.white),
               textAlign: TextAlign.left,
             ),
-            SvgPicture.asset('lib/assets/icons/icon-terms.svg')
+            // SvgPicture.asset('lib/assets/icons/icon-terms.svg')
           ],
         ));
 
@@ -52,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             // height: MediaQuery.of(context).size.height * 0.288,
             width: MediaQuery.of(context).size.width,
-            child: SvgPicture.asset('lib/assets/icons/icon-bg-title.svg'),
+            //child: SvgPicture.asset('lib/assets/icons/icon-bg-title.svg'),
           ),
           Container(
               child: Column(
@@ -228,5 +226,4 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ));
   }
-} 
-
+}

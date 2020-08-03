@@ -48,7 +48,6 @@ class _InputDropdown extends StatelessWidget {
 
 class FormReq extends StatefulWidget {
   static String tag = 'form-req-page';
-  
 
   @override
   _FormReqState createState() => _FormReqState();
@@ -69,7 +68,7 @@ class _FormReqState extends State<FormReq> {
     desc: '',
     image: '',
   );
-   var _initValues = {
+  var _initValues = {
     'name': '',
     'desc': '',
     'price': '',
@@ -96,8 +95,8 @@ class _FormReqState extends State<FormReq> {
         lastDate: DateTime(DateTime.now().year + 1),
         theme: ThemeData(
             primaryColor: Colors.white,
-            accentColor: Color.fromARGB(255, 255, 119, 0),
-            primarySwatch: Colors.orange));
+            accentColor: Color.fromARGB(255, 66, 224, 152),
+            primarySwatch: Colors.lightBlue));
     if (picked != null) {
       setState(() {
         selectedStartDate = picked;
@@ -111,8 +110,8 @@ class _FormReqState extends State<FormReq> {
       initialTime: selectedStartTime,
       theme: ThemeData(
           primaryColor: Colors.white,
-          accentColor: Color.fromARGB(255, 255, 119, 0),
-          primarySwatch: Colors.orange),
+          accentColor: Color.fromARGB(255, 66, 224, 152),
+          primarySwatch: Colors.lightBlue),
     );
     if (picked != null) {
       setState(() {
@@ -129,8 +128,8 @@ class _FormReqState extends State<FormReq> {
         lastDate: DateTime(DateTime.now().year + 1),
         theme: ThemeData(
             primaryColor: Colors.white,
-            accentColor: Color.fromARGB(255, 255, 119, 0),
-            primarySwatch: Colors.orange));
+            accentColor: Color.fromARGB(255, 66, 224, 152),
+            primarySwatch: Colors.lightBlue));
     if (picked != null) {
       setState(() {
         selectedEndDate = picked;
@@ -144,8 +143,8 @@ class _FormReqState extends State<FormReq> {
       initialTime: selectedEndTime,
       theme: ThemeData(
           primaryColor: Colors.white,
-          accentColor: Color.fromARGB(255, 255, 119, 0),
-          primarySwatch: Colors.orange),
+          accentColor: Color.fromARGB(255, 66, 224, 152),
+          primarySwatch: Colors.lightBlue),
     );
     if (picked != null) {
       setState(() {
@@ -169,8 +168,8 @@ class _FormReqState extends State<FormReq> {
     if (_isInit) {
       final productId = ModalRoute.of(context).settings.arguments as int;
       if (productId != null) {
-        _editedProduct =
-            Provider.of<Products>(context, listen: false).findById(id: productId, type: false);
+        _editedProduct = Provider.of<Products>(context, listen: false)
+            .findById(id: productId, type: false);
         _initValues = {
           'name': _editedProduct.name,
           'desc': _editedProduct.desc,
@@ -180,9 +179,13 @@ class _FormReqState extends State<FormReq> {
         };
         _imageUrlController.text = _editedProduct.image;
         selectedStartDate = _editedProduct.startDate;
-        selectedStartTime = new TimeOfDay(hour: _editedProduct.startDate.hour, minute: _editedProduct.startDate.minute);
+        selectedStartTime = new TimeOfDay(
+            hour: _editedProduct.startDate.hour,
+            minute: _editedProduct.startDate.minute);
         selectedEndDate = _editedProduct.endDate;
-        selectedEndTime = new TimeOfDay(hour: _editedProduct.endDate.hour, minute: _editedProduct.endDate.minute);
+        selectedEndTime = new TimeOfDay(
+            hour: _editedProduct.endDate.hour,
+            minute: _editedProduct.endDate.minute);
       }
     }
     _isInit = false;
@@ -280,16 +283,14 @@ class _FormReqState extends State<FormReq> {
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text("Form Permintaan"),
-        
       ),
       body: _isLoading
           ? Center(
               child: CircularProgressIndicator(),
             )
           : Container(
-            color: Colors.white,
-            child: Padding(
-              
+              color: Colors.white,
+              child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Form(
                   key: _form,
@@ -418,118 +419,120 @@ class _FormReqState extends State<FormReq> {
                       // -- END DATE FORM FIELD
 
                       // IMAGE FORM FIELD
-                       Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Container(
-                          width: 200,
-                          height: 200,
-                          margin: EdgeInsets.only(
-                            top: 30,
-                          ),
-                          
-                          decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.2),
-                            border: Border.all(
-                              width: 1,
-                              color: Colors.grey,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Container(
+                            width: 200,
+                            height: 200,
+                            margin: EdgeInsets.only(
+                              top: 30,
                             ),
-                            borderRadius: BorderRadius.circular(10)
-                          ),
-                          child: Column(
-                            children:<Widget>[
-                              
+                            decoration: BoxDecoration(
+                                color: Colors.grey.withOpacity(0.2),
+                                border: Border.all(
+                                  width: 1,
+                                  color: Colors.grey,
+                                ),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Column(children: <Widget>[
                               Container(
                                 child: Padding(
-                                  padding: EdgeInsets.fromLTRB(0,0,0,0),
+                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: _imageUrlController.text.isEmpty
-                                  ? Container(                                 
-                                    child: Column(
-                                      children: <Widget>[
-                                        Container(
-                                          margin: EdgeInsets.only(top: 65),
-                                          child: Icon(
-                                            Icons.photo_camera, color: Colors.grey.withOpacity(0.5), size: 50,),
+                                      ? Container(
+                                          child: Column(
+                                            children: <Widget>[
+                                              Container(
+                                                margin:
+                                                    EdgeInsets.only(top: 65),
+                                                child: Icon(
+                                                  Icons.photo_camera,
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  size: 50,
+                                                ),
+                                              ),
+                                              Text(
+                                                'Image URl',
+                                                style: TextStyle(
+                                                    fontSize: 12,
+                                                    color: Colors.grey),
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      : FittedBox(
+                                          child: Image.network(
+                                            _imageUrlController.text,
+                                            height: 198,
+                                            fit: BoxFit.contain,
+                                          ),
                                         ),
-                                        Text(
-                                          'Image URl',
-                                          style: TextStyle(fontSize: 12, color: Colors.grey),
-                                        ),
-                                      ],
-                                    ),
-                                  )
-                                  : FittedBox(
-                                    child: Image.network(
-                                      _imageUrlController.text,
-                                      height: 198,
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
                                 ),
                               )
-                            ]
+                            ]),
                           ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(bottom: 20),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              labelText: 'Image URL',
-                              labelStyle: TextStyle(color: Colors.black54),
+                          Container(
+                            margin: EdgeInsets.only(bottom: 20),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                labelText: 'Image URL',
+                                labelStyle: TextStyle(color: Colors.black54),
+                              ),
+                              cursorColor: Colors.black12,
+                              keyboardType: TextInputType.url,
+                              textInputAction: TextInputAction.done,
+                              controller: _imageUrlController,
+                              focusNode: _imageUrlFocusNode,
+                              onFieldSubmitted: (_) {
+                                _saveForm();
+                              },
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter an image URL.';
+                                }
+                                if (!value.startsWith('http') &&
+                                    !value.startsWith('https')) {
+                                  return 'Please enter a valid URL.';
+                                }
+                                if (!value.endsWith('.png') &&
+                                    !value.endsWith('.jpg') &&
+                                    !value.endsWith('.jpeg')) {
+                                  return 'Please enter a valid image URL.';
+                                }
+                                return null;
+                              },
+                              onSaved: (value) {
+                                _editedProduct = Product(
+                                    name: _editedProduct.name,
+                                    price: _editedProduct.price,
+                                    desc: _editedProduct.desc,
+                                    image: value,
+                                    id: _editedProduct.id);
+                              },
                             ),
-                            cursorColor: Colors.black12,
-                            keyboardType: TextInputType.url,
-                            textInputAction: TextInputAction.done,
-                            controller: _imageUrlController,
-                            focusNode: _imageUrlFocusNode,
-                            onFieldSubmitted: (_) {
-                              _saveForm();
-                            },
-                            validator: (value) {
-                              if (value.isEmpty) {
-                                return 'Please enter an image URL.';
-                              }
-                              if (!value.startsWith('http') &&
-                                  !value.startsWith('https')) {
-                                return 'Please enter a valid URL.';
-                              }
-                              if (!value.endsWith('.png') &&
-                                  !value.endsWith('.jpg') &&
-                                  !value.endsWith('.jpeg')) {
-                                return 'Please enter a valid image URL.';
-                              }
-                              return null;
-                            },
-                            onSaved: (value) {
-                              _editedProduct = Product(
-                                  name: _editedProduct.name,
-                                  price: _editedProduct.price,
-                                  desc: _editedProduct.desc,
-                                  image: value,
-                                  id: _editedProduct.id);
-                            },
                           ),
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 50,
+                          SizedBox(
+                            width: double.infinity,
+                            height: 50,
                             child: RaisedButton(
                               child: Text(
                                 'Simpan',
                                 style: TextStyle(color: Colors.white),
-                                ),
-                                color: Color.fromARGB(255, 255, 119, 0),
-                                onPressed: _saveForm,
                               ),
-                        ),
-                      ],
-                    ),
+                              color: Color.fromARGB(255, 66, 224, 152),
+                              onPressed: _saveForm,
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
               ),
-          ),
+            ),
     );
   }
 }

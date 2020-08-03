@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-  static Color _iconColor = Colors.redAccent.shade200;
+  static Color _iconColor = Colors.white;
 
   static const Color _lightPrimaryColor = Colors.white;
   static const Color _lightPrimaryVariantColor = Color(0XFFE1E1E1);
-  static const Color _lightSecondaryColor = Color.fromARGB(255, 255, 119, 0);
+  static const Color _lightSecondaryColor = Color.fromARGB(255, 54, 57, 164);
   static const Color _lightOnPrimaryColor = Colors.black;
 
   static final ThemeData lightTheme = ThemeData(

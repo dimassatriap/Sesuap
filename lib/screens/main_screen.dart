@@ -59,18 +59,18 @@ class _MainScreenState extends State<MainScreen> {
                 type: BottomNavigationBarType.fixed,
                 items: [
                   new BottomNavigationBarItem(
-                    icon: Icon(Custom.iconrequest),
-                    title: Text('Permintaan'),
+                    icon: Icon(Icons.fastfood),
+                    title: Text('Kebutuhan'),
                   ),
                   new BottomNavigationBarItem(
                     icon: Icon(Custom.iconoffer),
-                    title: Text('Penawaran'),
+                    title: Text('Bantu'),
                   ),
                   new BottomNavigationBarItem(
-                      icon: Icon(Icons.receipt), title: Text('Transaksi')),
+                      icon: Icon(Icons.people), title: Text('Partner')),
                   new BottomNavigationBarItem(
                     icon: Icon(Icons.person),
-                    title: Text('Akun'),
+                    title: Text('Profil'),
                   )
                 ],
                 onTap: (index) {

@@ -27,13 +27,13 @@ class _AkunScreenState extends State<AkunScreen> {
   @override
   void initState() {
     super.initState();
-    _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount account) {
-      setState(() {
-        _currentUser = account;
-      });
-      _getUser();
-    });
-    _googleSignIn.signInSilently();
+    // _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount account) {
+    //   setState(() {
+    //     _currentUser = account;
+    //   });
+    //   _getUser();
+    // });
+    // _googleSignIn.signInSilently();
   }
 
   _logout() {

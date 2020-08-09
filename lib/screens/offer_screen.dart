@@ -46,7 +46,7 @@ class _OfferScreenState extends State<OfferScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        /*appBar: AppBar(
+      /*appBar: AppBar(
           title: TextField(
             controller: null,
             autofocus: false,
@@ -76,7 +76,7 @@ class _OfferScreenState extends State<OfferScreen> {
                 }),
           ],
         ),*/
-        /*floatingActionButton: new FloatingActionButton(
+      /*floatingActionButton: new FloatingActionButton(
             heroTag: null,
             foregroundColor: Colors.white,
             onPressed: () {
@@ -84,13 +84,14 @@ class _OfferScreenState extends State<OfferScreen> {
                   MaterialPageRoute(builder: (context) => FormOffer()));
             },
             child: Icon(Icons.add)),*/
-        body: _isLoading
-            ? Center(
-                child: CircularProgressIndicator(),
-              )
-            : RefreshIndicator(
-                onRefresh: () => _refreshOfferProduct(),
-                child: ProductsGrid(type: true)),
-        bottomNavigationBar: BottomNavBar());
+      body: _isLoading
+          ? Center(
+              child: CircularProgressIndicator(),
+            )
+          : RefreshIndicator(
+              onRefresh: () => _refreshOfferProduct(),
+              child: ProductsGrid(type: true)),
+      // bottomNavigationBar: BottomNavBar()
+    );
   }
 }

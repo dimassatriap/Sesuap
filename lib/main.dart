@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         title: 'Pinjemin',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
-        home: OfferScreen(),
+        home: MainScreen(),
         routes: {
           '/login': (BuildContext context) => new LoginScreen(),
           LoginScreen.tag: (context) => LoginScreen(),

@@ -12,6 +12,10 @@ Aplikasi SeSuap merupakan perwujudan dari zero food waste movement. SeSuap hadir
 ```bash
 $ flutter packages get
 ```
+or
+```bash
+$ flutter pub get
+```
 7. Run "flutter run" on your terminal or simply Run & Debug it on your IDE (Option: Visual Studio Code, Android Studio)
 ```bash
 $ flutter run

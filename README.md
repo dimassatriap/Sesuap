@@ -8,7 +8,7 @@ Aplikasi SeSuap merupakan perwujudan dari zero food waste movement. SeSuap hadir
 3. Set up android device or android emulator
 4. Clone https://github.com/dimassatriap/Sesuap.git into your directory
 5. Go to project folder: ".\Sesuap"
-6. Run "flutter packages get" on your terminal
+6. Install packages by running one of these on your terminal :
 ```bash
 $ flutter packages get
 ```
